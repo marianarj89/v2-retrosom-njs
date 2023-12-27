@@ -2,7 +2,7 @@ import { signInWithEmailAndPassword, Auth, UserCredential, User } from 'firebase
 import { auth } from './firebase';
 
 export interface Usuario {
-  id?: string;
+  id: string;
   email: string;
   senha: string;
 }
