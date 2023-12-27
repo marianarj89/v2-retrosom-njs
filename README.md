@@ -4,16 +4,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   SomRetrô | Projeto Final [ JAMstack + NextJS ]
 </h1>
 <p> Aluna: Mariana Sá Ribas </p>
-<p> Professor: Armênio Cardoso. </p>
+<p> Professor: Armênio Cardoso </p>
 <p> Projeto final da disciplina: JAMstack e NextJS</p>
 <p> Pós-Graduação em Desenvolvimento Web Full Stack | Instituto Infnet</p>
 
-  [Vercel](#) | [Github](#)
+  [Vercel](https://v2-retrosom-njs.vercel.app/) | [Github](https://github.com/marianarj89/v2-retrosom-njs)
 
  ![Presentation](/assets/projeto.jpg)
 
 
-## Getting Started
+## Iniciando
+### renomear .env.local.teste para .env.local
 
 First, run the development server:
 

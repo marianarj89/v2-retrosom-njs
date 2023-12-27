@@ -13,7 +13,7 @@ async function getGalleryImages() {
 
   const galleryImages = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 6; i++) {
     const response = await fetch(`https://source.unsplash.com/collection/${collectionId}/480x480`, {
       headers: {
         Authorization: `Client-ID ${accessKey}`,
@@ -44,14 +44,21 @@ function Galeria() {
   }, []);
 
   return (
-    <div className="bg-white min-h-screen">
-<Header />
+    <div className="bg-white min-h-screen loading-lazy">
+      <Header />
       <main>
-        <h1 className='text-3xl font-black text-sky-900 pt-10'> Galeria de Imagens</h1>
+        <h1 className='text-3xl font-black text-sky-900 pt-10 pl-10'> Galeria de Imagens</h1>
         <div className="w-1/2 relative flex flex-wrap justify-around p-5">
           {galleryImages.map && galleryImages.map((imageUrl: string, index: Key) => (
-            <span key={index} className="w-48 h-48 p-5 bg-aliceblue shadow-md m-5">
-              <Image src={imageUrl} alt={`Image ${index}`} width={480} height={480} />
+            <span key={index} className="w-60 h-100 p-5 bg-aliceblue shadow-md m-5 ">
+              <Image
+                src={imageUrl}
+                alt={`Image ${index}`}
+                width={480}
+                height={480}
+                className="rounded-lg"
+                loading="lazy"
+              />
             </span>
           ))}
         </div>

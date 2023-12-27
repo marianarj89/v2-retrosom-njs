@@ -23,7 +23,7 @@ const RandomUserGenerator: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap p-20 "> 
+    <div className="flex flex-wrap p-12 "> 
       {user && (
         <div className="flex flex-col items-center">
           <img className="imgTeam rounded-full  " src={user.picture.large} alt={`${user.name.first} ${user.name.last}`} />

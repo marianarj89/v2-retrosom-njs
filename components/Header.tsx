@@ -9,14 +9,25 @@ import {
   FingerPrintIcon,
   SpeakerWaveIcon,
   MusicalNoteIcon,
+  UserGroupIcon,
+  QuestionMarkCircleIcon,
+  EnvelopeIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
 const products = [
-  { name: 'Top 10', description: 'Suas músicas mais ouvidas', href: '#', icon: MusicalNoteIcon },
-  { name: 'Discos', description: 'Seus discos preferidos', href: '#', icon: SpeakerWaveIcon },
+  { name: 'Quem Somos', description: 'Conheça o time', href: '/quem-somos', icon: UserGroupIcon },
+  { name: 'FAQ', description: 'Perguntas frequentes', href: '/quem-somos/faq', icon: QuestionMarkCircleIcon },
+  { name: 'Contato', description: 'Envie uma mensagem', href: '/quem-somos/contato', icon: SpeakerWaveIcon },
 ]
+
+const quemSomos = [
+  { name: 'Quem Somos', description: 'Suas músicas mais ouvidas', href: '/quem-somos', icon: UserGroupIcon },
+  { name: 'FAQ', description: 'Suas músicas mais ouvidas', href: '/quem-somos/faq', icon: QuestionMarkCircleIcon },
+  { name: 'Contato', description: 'Seus discos preferidos', href: '/quem-somos/contato', icon: SpeakerWaveIcon },
+]
+
 const callsToAction = [
   { name: 'Quem Somos', href: '/quem-somos', icon: PlayCircleIcon },
   { name: 'Contato', href: '/contato', icon: PhoneIcon },
@@ -35,7 +46,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">SOM Retrô</span>
-            <img className="h-20 w-auto float-left" src="/logo-header.png" alt="" />
+            <img className="h-12 w-auto float-left" src="/logo-header.png" alt="" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -51,7 +62,7 @@ export default function Header() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              O que fazemos?
+            Sobre
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
 
@@ -84,7 +95,7 @@ export default function Header() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                {/* <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   {callsToAction.map((item) => (
                     <a
                       key={item.name}
@@ -95,10 +106,11 @@ export default function Header() {
                       {item.name}
                     </a>
                   ))}
-                </div>
+                </div> */}
               </Popover.Panel>
             </Transition>
           </Popover>
+          
 
           <a href="/blog" className="text-sm font-semibold leading-6 text-gray-900">
            Nosso Blog
@@ -106,11 +118,15 @@ export default function Header() {
           <a href="/galeria" className="text-sm font-semibold leading-6 text-gray-900">
             Galeria
           </a>
+          <a href="/o-que-fazemos" className="text-sm font-semibold leading-6 text-gray-900">
+            O que Fazemos?
+          </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Log in  <span aria-hidden="true">&rarr;</span>
           </a>
+          
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -163,13 +179,13 @@ export default function Header() {
                   )}
                 </Disclosure>
                 <a
-                  href="#"
+                  href="/o-que-fazemos"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   O que fazemos?
                 </a>
                 <a
-                  href="blog"
+                  href="/blog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Nosso Blog
