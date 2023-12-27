@@ -18,8 +18,8 @@ const products = [
   { name: 'Discos', description: 'Seus discos preferidos', href: '#', icon: SpeakerWaveIcon },
 ]
 const callsToAction = [
-  { name: 'Sobre nós', href: '#', icon: PlayCircleIcon },
-  { name: 'Contato', href: '#', icon: PhoneIcon },
+  { name: 'Quem Somos', href: '/quem-somos', icon: PlayCircleIcon },
+  { name: 'Contato', href: '/contato', icon: PhoneIcon },
 ]
 
 function classNames(...classes: (string | undefined | null | false)[]): string {
