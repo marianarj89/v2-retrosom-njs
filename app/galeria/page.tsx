@@ -31,7 +31,7 @@ async function getGalleryImages() {
 //   keywords: ['música', 'playlists', 'music'],
 // };
 
-function Galeria(props: { galleryImages: any[] }) {
+function Galeria() {
   const [galleryImages, setGalleryImages] = useState<string[]>([]);
 
   useEffect(() => {
