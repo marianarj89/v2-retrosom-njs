@@ -1,5 +1,6 @@
 import React from 'react';
 
+export const dynamic = 'force-static'
 const Footer: React.FC = () => {
   return (
     <footer className="dark:bg-gray-800 bottom-0 left-0 w-full">

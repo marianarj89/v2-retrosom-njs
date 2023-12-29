@@ -2,7 +2,7 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { useState, useEffect } from 'react';
-import Login from '@/components/Login';
+import Login from '@/app/lib/ui/Login';
 
 
 export default function LoginPage() {

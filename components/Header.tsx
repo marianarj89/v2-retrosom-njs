@@ -28,6 +28,8 @@ const callsToAction = [
   { name: 'Contato', href: '/contato', icon: PhoneIcon },
 ]
 
+export const dynamic = 'force-static'
+
 function classNames(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(' ');
 }

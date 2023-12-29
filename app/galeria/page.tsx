@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Key } from 'react';
+import Loading from '../loading';
 
 async function getGalleryImages() {
   const unplashApiKey = process.env.ACCESS_KEY_UNPLASH;
@@ -30,14 +31,20 @@ async function getGalleryImages() {
 //   description: 'Som Retrô - Mariana Sá Ribas',
 //   keywords: ['música', 'playlists', 'music'],
 // };
-
 function Galeria() {
   const [galleryImages, setGalleryImages] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchGalleryImages = async () => {
-      const images = await getGalleryImages();
-      setGalleryImages(images);
+      try {
+        const images = await getGalleryImages();
+        setGalleryImages(images);
+      } catch (error) {
+        console.error('Error fetching gallery images:', error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchGalleryImages();
@@ -48,20 +55,25 @@ function Galeria() {
       <Header />
       <main>
         <h1 className='text-3xl font-black text-sky-900 pt-10 pl-10'> Galeria de Imagens</h1>
-        <div className="w-1/2 relative flex flex-wrap justify-around p-5">
-          {galleryImages.map && galleryImages.map((imageUrl: string, index: Key) => (
-            <span key={index} className="w-60 h-100 p-5 bg-aliceblue shadow-md m-5 ">
-              <Image
-                src={imageUrl}
-                alt={`Image ${index}`}
-                width={480}
-                height={480}
-                className="rounded-lg"
-                loading="lazy"
-              />
-            </span>
-          ))}
-        </div>
+        
+        {loading ? (
+          <Loading /> // Display Loading component while fetching images
+        ) : (
+          <div className="w-1/2 relative flex flex-wrap justify-around p-5">
+            {galleryImages.map && galleryImages.map((imageUrl: string, index: Key) => (
+              <span key={index} className="w-60 h-100 p-5 bg-aliceblue shadow-md m-5 ">
+                <Image
+                  src={imageUrl}
+                  alt={`Image ${index}`}
+                  width={480}
+                  height={480}
+                  className="rounded-lg"
+                  loading="lazy"
+                />
+              </span>
+            ))}
+          </div>
+        )}
       </main>
       <Footer />
     </div>

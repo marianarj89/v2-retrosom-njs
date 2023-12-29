@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ['música', 'playlists', 'music'],
 }
 
+export const dynamic = 'auto'
+
 export default function RootLayout({
   children, 
 }: {

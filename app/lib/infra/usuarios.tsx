@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword, Auth, UserCredential, User } from 'firebase/auth';
-import { auth } from './firebase';
+import { auth } from '../../../components/firebase';
 
 export interface Usuario {
   id: string;

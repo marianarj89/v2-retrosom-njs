@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FormEvent } from 'react';
-import { logarSistema, Usuario as UsuarioType } from './usuarios';
+import { logarSistema, Usuario as UsuarioType } from '../infra/usuarios';
 
 export interface Usuario {
   id?: string;

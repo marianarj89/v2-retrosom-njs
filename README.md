@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 <h1 align="center">
-  SomRetrô | Projeto Final [ JAMstack + NextJS ]
+  Projeto Final [ JAMstack + NextJS ]
 </h1>
 <p> Aluna: Mariana Sá Ribas </p>
 <p> Professor: Armênio Cardoso </p>
@@ -10,7 +10,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
   [Vercel](https://v2-retrosom-njs.vercel.app/) | [Github](https://github.com/marianarj89/v2-retrosom-njs)
 
- ![Presentation](/assets/projeto.jpg)
+ ![O projeto](/assets/projeto.jpg)
+ ![GTmetrix](/assets/gtmetrix.jpg)
 
 
 ## Iniciando

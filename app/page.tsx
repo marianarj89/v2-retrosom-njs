@@ -39,7 +39,7 @@ export default function Home() {
 
             <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
               <h1 className="text-3xl font-extrabold sm:text-5xl">
-                <Image className='justify-center items-center mx-auto' src="/logo.png" alt="Logo Som Retro" width={300} height={315} />
+                <Image className='justify-center items-center mx-auto pb-5' src="/logo.png" alt="Logo Som Retro" width={300} height={315} />
                 The sky calls to us cosmos
 
                 <strong className="block font-extrabold text-rose-300"> Apollonius of Perga. </strong>
@@ -51,10 +51,10 @@ export default function Home() {
 
               <div className="mt-8 flex flex-wrap gap-4 text-center">
                 <a
-                  href="#"
+                  href="/login"
                   className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
                 >
-                  Vamos começar?
+                  Fazer Login
                 </a>
 
                 <a
@@ -145,7 +145,7 @@ export default function Home() {
   </article>
   <article className="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
     <img
-      alt="Office"
+      alt="Hero"
       src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
       className="absolute inset-0 h-full w-full object-cover"
     />
